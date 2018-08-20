@@ -137,7 +137,11 @@ def drawProfile():
             screen.blit(temp, (screenWidth/2 - temp.get_width()/2, 320))
 
         count += 1
-
+    tempText = ralewayRegular24.render("Your Favorite Location", True, BLACK)
+    tempText2 = ralewayRegular24.render("85 Location Points", True, GREY)
+    screen.blit(tempText, (screenWidth/2 - tempText.get_width()/2, 400))
+    screen.blit(tempText2, (screenWidth/2 - tempText2.get_width()/2, 360))
+    screen.blit(image.load("Annesley Hall.jpg"), (screenWidth/2 -70, 440))
 def coor():
     headers = {}
     headers['User-Agent'] = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
@@ -192,7 +196,7 @@ while running:
     mx,my = mouse.get_pos() #Mouse position
 #---------------------------------------------------------------------
     if section == "Menu":
-         screenFill(TEAL)
+         screenFill(WHITE)
          drawMenu()
          if (startRect.collidepoint(mx,my) and leftClick):
              section = "Map"
