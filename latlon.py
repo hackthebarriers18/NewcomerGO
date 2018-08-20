@@ -16,8 +16,8 @@ baseurl = "http://api.ipstack.com/%s?access_key=760628d5decbc2753ef07b989107005a
 # info
 f = urllib.request.urlopen(baseurl)
 json_string = json.loads(f.read())
-print(json_string['latitude'])
-print(json_string['longitude'])
+# print(json_string['latitude'])
+# print(json_string['longitude'])
 lat = json_string['latitude']
 lon = json_string['longitude']
 f.close()
